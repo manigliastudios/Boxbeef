@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Box Beef Franca | Carnes Especiais para Grandes Momentos</title>
+<meta name="description" content="Box Beef, bar e espetaria no Parque Francal, Franca-SP. Carnes especiais para grandes momentos. Peça pelo WhatsApp ou venha nos visitar a partir das 17h.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://boxbeeffranca.com.br/">
+
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:site_name" content="Box Beef">
+<meta property="og:title" content="Box Beef Franca | Carnes Especiais para Grandes Momentos">
+<meta property="og:description" content="Apaixonados por churrasco. Bar e espetaria no Parque Francal, Franca-SP.">
+<meta property="og:image" content="https://boxbeeffranca.com.br/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://boxbeeffranca.com.br/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Box Beef Franca | Carnes Especiais para Grandes Momentos">
+<meta name="twitter:image" content="https://boxbeeffranca.com.br/og-image.jpg">
+
+<meta name="theme-color" content="#0E0B09">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Box Beef",
+  "image": "https://boxbeeffranca.com.br/og-image.jpg",
+  "telephone": "+5516992810772",
+  "priceRange": "R$40-100",
+  "servesCuisine": "Churrasco",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. José de Melo, 350 - Parque Francal",
+    "addressLocality": "Franca",
+    "addressRegion": "SP",
+    "postalCode": "14403-073",
+    "addressCountry": "BR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "71"
+  },
+  "sameAs": ["https://www.instagram.com/boxbeeffranca/"]
+}
+</script>
+
+<style>
+  :root{
+    --char:      #0E0B09;
+    --char-2:    #161110;
+    --smoke:     #241C18;
+    --smoke-ln:  #3A2E28;
+    --red:       #EC1921;
+    --red-deep:  #8C0F13;
+    --amber:     #F2A65A;
+    --bone:      #F5EDE5;
+    --bone-dim:  #C9BBAF;
+    --bone-faint:#8C8078;
+
+    --display: 'Baloo 2', 'Arial Rounded MT Bold', sans-serif;
+    --body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --edge: clamp(1.25rem, 5vw, 4rem);
+    --radius: 14px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
+
+  body{
+    margin:0; background: var(--char); color: var(--bone);
+    font-family: var(--body); font-size: 16px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  h1,h2,h3{ font-family: var(--display); font-weight:700; margin:0; line-height:1.02; }
+  p{ margin:0; } a{ color:inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; list-style:none; } img{ max-width:100%; display:block; }
+  .visually-hidden{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+  :focus-visible{ outline: 2px solid var(--amber); outline-offset: 3px; }
+  .wrap{ max-width: 1140px; margin: 0 auto; padding-inline: var(--edge); }
+
+  /* ============ NAV ============ */
+  .nav{
+    position: fixed; top:0; left:0; right:0; z-index: 50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 0.85rem var(--edge);
+    background: rgba(14,11,9,0);
+    border-bottom: 1px solid transparent;
+    transition: background .35s ease, border-color .35s ease, padding .35s ease;
+  }
+  .nav.is-scrolled{
+    background: rgba(14,11,9,0.88); backdrop-filter: blur(10px);
+    border-bottom-color: var(--smoke-ln); padding-block: 0.6rem;
+  }
+  .nav-mark{ display:flex; align-items:center; gap:0.55rem; }
+  .nav-mark img{ height:24px; width:auto; }
+  .nav-mark span{ font-family: var(--display); font-weight:700; font-size:1.15rem; letter-spacing:0.2px; color: var(--bone); }
+  .nav-links{ display:none; gap: 2rem; font-size:0.92rem; color: var(--bone-dim); }
+  .nav-links a{ transition: color .2s ease; }
+  .nav-links a:hover{ color: var(--amber); }
+  .nav-cta{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    background: var(--red); color: var(--bone);
+    padding: 0.55rem 1.05rem; border-radius: 999px;
+    font-size:0.86rem; font-weight:700;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .nav-cta:hover{ background:#c81119; transform: translateY(-1px); }
+  @media (min-width: 800px){ .nav-links{ display:flex; } }
+
+  /* ============ HERO ============ */
+  .hero{ position: relative; min-height: 100svh; display:flex; align-items:flex-end; overflow:hidden; isolation:isolate; }
+  .hero-photo-wrap{ position:absolute; inset:-4% -2%; z-index:1; overflow:hidden; }
+  .hero-photo-wrap img{ width:100%; height:100%; object-fit:cover; object-position: 60% 45%; }
+  .hero-vignette{
+    position:absolute; inset:0; z-index:2;
+    background:
+      linear-gradient(180deg, rgba(9,7,6,0.55) 0%, rgba(9,7,6,0.10) 26%, rgba(9,7,6,0.30) 60%, rgba(9,7,6,0.95) 100%),
+      linear-gradient(90deg, rgba(9,7,6,0.65) 0%, rgba(9,7,6,0.15) 46%, rgba(9,7,6,0.05) 70%);
+  }
+  .hero-inner{ position:relative; z-index:4; width:100%; padding: calc(var(--edge) + 3.2rem) var(--edge) 3.6rem; }
+  .hero-logo{ width: clamp(200px, 30vw, 320px); height:auto; filter: drop-shadow(0 6px 22px rgba(0,0,0,0.45)); }
+  .hero-tag{
+    margin-top: 1.15rem; font-family: var(--body); font-weight:800;
+    font-size: clamp(1.05rem, 2.6vw, 1.4rem); color: var(--bone); max-width: 24ch;
+  }
+  .hero-sub{ margin-top: 0.55rem; color: var(--bone-dim); font-size: 1rem; max-width: 40ch; }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap: 0.85rem; margin-top: 1.9rem; }
+  .btn{
+    display:inline-flex; align-items:center; gap:0.55rem; padding: 0.85rem 1.5rem;
+    border-radius: 999px; font-weight:700; font-size:0.95rem;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary{ background: var(--red); color: var(--bone); }
+  .btn-primary:hover{ background:#c81119; transform: translateY(-2px); }
+  .btn-ghost{ border-color: rgba(255,255,255,0.28); color: var(--bone); background: rgba(0,0,0,0.18); }
+  .btn-ghost:hover{ border-color: var(--amber); color: var(--amber); transform: translateY(-2px); }
+  .btn svg{ width:16px; height:16px; flex:none; }
+
+  .hero-scroll{
+    position:absolute; bottom: 1.6rem; left: var(--edge); z-index:4;
+    display:flex; align-items:center; gap:0.5rem; font-size:0.75rem; color: var(--bone-dim);
+  }
+  .hero-scroll .line{ width:1px; height:26px; background: rgba(255,255,255,0.35); position:relative; overflow:hidden; }
+  .hero-scroll .line::after{
+    content:''; position:absolute; top:-100%; left:0; width:100%; height:100%;
+    background: var(--amber); animation: scrollrun 2.1s ease-in-out infinite;
+  }
+  @keyframes scrollrun{ 0%{ top:-100%; } 60%{ top:100%; } 100%{ top:100%; } }
+  @media (prefers-reduced-motion: reduce){ .hero-scroll .line::after{ animation:none; top:0; } }
+
+  /* ============ SECTION SCAFFOLDING ============ */
+  section{ position:relative; }
+  .section-pad{ padding: clamp(3.6rem, 8vw, 6.5rem) 0; }
+  .eyebrow{ color: var(--red); font-weight:800; font-size:0.85rem; margin-bottom:0.6rem; }
+  .section-head{ max-width: 46ch; }
+  .section-head h2{ font-size: clamp(2rem, 4.6vw, 3.1rem); color: var(--bone); }
+
+  /* divider: line — horn — line */
+  .divider{ display:flex; align-items:center; justify-content:center; gap:1rem; margin: 0 auto; max-width:420px; }
+  .divider .ln{ flex:1; height:1px; background: linear-gradient(90deg, transparent, var(--red-deep)); }
+  .divider .ln.right{ background: linear-gradient(90deg, var(--red-deep), transparent); }
+  .divider img{ width:26px; height:auto; flex:none; }
+
+  /* ============ ABOUT ============ */
+  .about{ background: var(--char); }
+  .about-grid{ display:grid; gap: clamp(2rem, 6vw, 4rem); grid-template-columns: 1fr; align-items:center; }
+  @media (min-width: 860px){ .about-grid{ grid-template-columns: 1fr 1fr; } }
+  .about-copy p{ color: var(--bone-dim); font-size: 1.05rem; margin-top: 1.2rem; max-width: 48ch; }
+  .about-photo{ border-radius: var(--radius); overflow:hidden; border:1px solid var(--smoke-ln); aspect-ratio: 4/3; }
+  .about-photo img{ width:100%; height:100%; object-fit:cover; object-position: 30% 35%; }
+  .trust{ display:flex; align-items:center; gap:0.6rem; margin-top: 1.6rem; }
+  .trust .stars{ display:flex; gap:0.18rem; }
+  .trust .stars svg{ width:15px; height:15px; color: var(--amber); }
+  .trust a{ font-size:0.86rem; color: var(--bone-faint); }
+  .trust a:hover{ color: var(--amber); }
+  .about-ctas{ margin-top: 1.6rem; }
+
+  /* ============ EVENT BANNER ============ */
+  .event{ background: linear-gradient(90deg, var(--red-deep), var(--red) 60%, var(--red-deep)); padding: 1.5rem var(--edge); }
+  .event-row{ max-width:1140px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; }
+  .event-text{ display:flex; flex-wrap:wrap; align-items:baseline; gap:0.6rem 0.9rem; }
+  .event-text .k{ font-family: var(--display); font-weight:700; font-size:1.3rem; color:var(--bone); }
+  .event-text .d{ font-size:0.9rem; color: rgba(245,237,229,0.85); }
+  .event .btn-ghost{ border-color: rgba(243,234,224,0.4); color: var(--bone); background: rgba(0,0,0,0.14); }
+  .event .btn-ghost:hover{ border-color: var(--bone); color: var(--bone); background: rgba(0,0,0,0.28); }
+
+  /* ============ TAGLINE BANNER (photo) ============ */
+  .tagline-banner{ position:relative; min-height: 300px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .tagline-banner img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: center 60%; }
+  .tagline-banner::after{
+    content:''; position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(10,8,7,0.78), rgba(10,8,7,0.55) 45%, rgba(10,8,7,0.82));
+  }
+  .tagline-inner{ position:relative; z-index:2; text-align:center; padding: 3.2rem var(--edge); }
+  .tagline-inner img.mark{ width:30px; height:auto; margin: 0 auto 1rem; }
+  .tagline-inner p{
+    font-family: var(--display); font-weight:700; color: var(--bone);
+    font-size: clamp(1.3rem, 3.6vw, 2.1rem); letter-spacing:0.5px; max-width: 18ch; margin:0 auto;
+  }
+
+  /* ============ OFFERINGS ============ */
+  .offerings{ background: var(--char-2); }
+  .cards{ margin-top: 2.6rem; display:grid; gap: 1.1rem; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width:760px){ .cards{ grid-template-columns: repeat(4, 1fr); } }
+  .card{
+    background: var(--smoke); border: 1px solid var(--smoke-ln); border-radius: var(--radius);
+    padding: 1.6rem 1.3rem; transition: border-color .25s ease, transform .25s ease;
+  }
+  .card:hover{ border-color: var(--red); transform: translateY(-4px); }
+  .card .ic{ height:32px; margin-bottom:1.1rem; }
+  .card .ic img{ height:100%; width:auto; }
+  .card .ic svg{ width:30px; height:30px; color: var(--amber); }
+  .card h3{ font-family: var(--body); font-weight:800; font-size:1.02rem; color: var(--bone); margin-bottom:0.4rem; }
+  .card p{ font-size:0.88rem; color: var(--bone-faint); }
+
+  /* ============ VISIT ============ */
+  .visit{ background: var(--char); }
+  .visit-grid{ display:grid; gap: 2rem; grid-template-columns:1fr; margin-top:2.6rem; }
+  @media (min-width:860px){ .visit-grid{ grid-template-columns: 0.85fr 1.15fr; } }
+  .visit-card{ background: var(--smoke); border:1px solid var(--smoke-ln); border-radius: var(--radius); padding: 1.8rem; }
+  .visit-card h3{ font-family: var(--body); font-weight:800; font-size:1rem; color:var(--bone); margin-bottom:1rem; }
+  .hours-row{ display:flex; justify-content:space-between; padding:0.55rem 0; border-bottom:1px solid var(--smoke-ln); font-size:0.92rem; }
+  .hours-row:last-of-type{ border-bottom:none; }
+  .hours-row span:first-child{ color: var(--bone-dim); }
+  .hours-row span:last-child{ color: var(--bone); font-weight:700; }
+  .hours-note{ margin-top:1rem; font-size:0.82rem; color: var(--bone-faint); }
+  .hours-note a{ color: var(--amber); }
+  .map-card{ border-radius: var(--radius); overflow:hidden; border:1px solid var(--smoke-ln); background: var(--smoke); }
+  .map-card iframe{ width:100%; height:280px; border:0; filter: grayscale(0.25) contrast(1.05); display:block; }
+  .map-addr{ padding: 1.3rem 1.4rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+  .map-addr p{ color: var(--bone-dim); font-size:0.92rem; }
+  .map-addr .btn{ padding:0.65rem 1.15rem; font-size:0.85rem; }
+
+  /* ============ FOOTER ============ */
+  .site-footer{ background: var(--char); border-top:1px solid var(--smoke-ln); padding: 3.2rem 0 2rem; }
+  .footer-top{ display:flex; flex-wrap:wrap; gap:2.5rem; justify-content:space-between; }
+  .footer-brand{ display:flex; align-items:center; gap:0.6rem; }
+  .footer-brand img{ height:26px; width:auto; }
+  .footer-brand span{ font-family: var(--display); font-weight:700; font-size:1.1rem; }
+  .footer-contact{ display:flex; flex-direction:column; gap:0.65rem; font-size:0.92rem; color: var(--bone-dim); }
+  .footer-contact a{ display:flex; align-items:center; gap:0.55rem; transition: color .2s ease; }
+  .footer-contact a:hover{ color: var(--amber); }
+  .footer-contact svg{ width:16px; height:16px; flex:none; color: var(--red); }
+  .footer-bottom{
+    margin-top:2.6rem; padding-top:1.6rem; border-top:1px solid var(--smoke-ln);
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:0.8rem;
+    font-size:0.78rem; color: var(--bone-faint);
+  }
+  .footer-bottom a:hover{ color: var(--amber); }
+</style>
+</head>
+<body>
+
+<a href="#conteudo" class="visually-hidden">Pular para o conteúdo</a>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#topo" class="nav-mark">
+    <img src="icon-horns.png" alt="" width="40" height="26">
+    <span>BOX BEEF</span>
+  </a>
+  <div class="nav-links">
+    <a href="#sobre">Sobre</a>
+    <a href="#menu">O que rola</a>
+    <a href="#visita">Horário &amp; local</a>
+  </div>
+  <a class="nav-cta" href="https://wa.me/5516992810772?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido" target="_blank" rel="noopener">
+    Pedir no WhatsApp
+  </a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="topo">
+  <div class="hero-photo-wrap" id="parallax-photo">
+    <img src="hero-steak.jpg" alt="Carne grelhada na brasa, com fogo ao fundo" fetchpriority="high">
+  </div>
+  <div class="hero-vignette"></div>
+
+  <div class="hero-inner">
+    <img class="hero-logo" src="logo-white.png" alt="Box Beef">
+    <p class="hero-tag">Apaixonados por churrasco.</p>
+    <p class="hero-sub">Carnes especiais para grandes momentos — bar e espetaria no Parque Francal, Franca.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://wa.me/5516992810772?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.9 14.2c-.3.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.8-.8-3.2-1.3-5.3-4.5-5.5-4.7-.2-.2-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5.3.7.9 2.3 1 2.5.1.2.2.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.5-.6.6-.2.2-.4.4-.2.8.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.2.8-.1.2-.3.9-1 1.1-1.3.2-.3.5-.3.8-.2.3.1 1.9.9 2.2 1.1.3.1.5.2.6.3.1.2.1.9-.2 1.6Z"/></svg>
+        Pedir no WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Jos%C3%A9%20de%20Melo%2C%20350%20-%20Parque%20Francal%2C%20Franca%20-%20SP%2C%2014403-073" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Ver rota
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true"><span class="line"></span> role para baixo</div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============ SOBRE ============ -->
+  <section class="about section-pad" id="sobre">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Sobre a casa</p>
+        <h2>Onde a brasa não apaga</h2>
+        <p>A Box Beef é ponto de encontro para quem gosta de churrasco, drinks gelados em pote e mesa cheia até tarde. Fica no Parque Francal, em Franca, com área externa e clima descontraído — o tipo de lugar pra reunir a turma depois do expediente.</p>
+        <div class="trust">
+          <span class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.3 7-6.3-3.6-6.3 3.6L7 14.2 2 9.3l7.1-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.3 7-6.3-3.6-6.3 3.6L7 14.2 2 9.3l7.1-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.3 7-6.3-3.6-6.3 3.6L7 14.2 2 9.3l7.1-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.3 7-6.3-3.6-6.3 3.6L7 14.2 2 9.3l7.1-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" opacity="0.4"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.3 7-6.3-3.6-6.3 3.6L7 14.2 2 9.3l7.1-.7L12 2Z"/></svg>
+          </span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Box+Beef+Franca+SP" target="_blank" rel="noopener">4,5 · 71 avaliações no Google</a>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="about-storefront.jpg" alt="Fachada da Box Beef no Parque Francal, Franca" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVENTO ============ -->
+  <section class="event" aria-label="Próximo evento">
+    <div class="event-row">
+      <div class="event-text">
+        <span class="k">Box Beef Day</span>
+        <span class="d">Sábado, 10 de outubro · a partir das 14h · ingressos Duoticket</span>
+      </div>
+      <a class="btn btn-ghost" href="https://www.instagram.com/boxbeeffranca/" target="_blank" rel="noopener">Detalhes no Instagram</a>
+    </div>
+  </section>
+
+  <!-- ============ O QUE ROLA ============ -->
+  <section class="offerings section-pad" id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">O que você encontra</p>
+        <h2>Fogo, fumaça e copo gelado</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="ic"><img src="icon-flame.png" alt=""></div>
+          <h3>Espetos na brasa</h3>
+          <p>Grelhados na hora, no ponto certo.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><img src="icon-knives.png" alt=""></div>
+          <h3>Cortes &amp; petiscos</h3>
+          <p>Para dividir com a mesa.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 2h8l-1 4H9L8 2Z"/><path d="M7 6h10l1 13a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L7 6Z"/><path d="M7.5 12h9"/></svg></div>
+          <h3>Potes gelados</h3>
+          <p>Drinks autorais, bem geladinhos.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 2h6v3.5l1.5 2v12a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-12L9 5.5V2Z"/><path d="M9 12h6"/></svg></div>
+          <h3>Chopp &amp; cerveja</h3>
+          <p>Sempre na temperatura certa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAGLINE BANNER ============ -->
+  <section class="tagline-banner">
+    <img src="banner-steaks.jpg" alt="Cortes grelhados na brasa" loading="lazy">
+    <div class="tagline-inner">
+      <img class="mark" src="icon-horns.png" alt="">
+      <p>Carnes especiais para grandes momentos</p>
+    </div>
+  </section>
+
+  <!-- ============ HORÁRIO & LOCAL ============ -->
+  <section class="visit section-pad" id="visita">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Horário &amp; localização</p>
+        <h2>Bora pra Box Beef</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Horário</h3>
+          <div class="hours-row"><span>Abertura</span><span>a partir das 17h</span></div>
+          <p class="hours-note">Horário sujeito a alterações. <a href="https://www.google.com/maps/search/?api=1&query=Box+Beef+Franca+SP" target="_blank" rel="noopener">Confira o horário completo no Google Maps →</a></p>
+        </div>
+        <div class="map-card">
+          <iframe
+            src="https://www.google.com/maps?q=R.+Jos%C3%A9+de+Melo,+350+-+Parque+Francal,+Franca+-+SP,+14403-073&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa — Box Beef, R. José de Melo, 350, Franca-SP"></iframe>
+          <div class="map-addr">
+            <p>R. José de Melo, 350 — Parque Francal, Franca-SP, 14403-073</p>
+            <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Jos%C3%A9%20de%20Melo%2C%20350%20-%20Parque%20Francal%2C%20Franca%20-%20SP%2C%2014403-073" target="_blank" rel="noopener">Ver rota</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="#topo" class="footer-brand">
+        <img src="icon-horns.png" alt="">
+        <span>BOX BEEF</span>
+      </a>
+      <div class="footer-contact">
+        <a href="tel:+5516992810772">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.25 1L6.6 10.8Z"/></svg>
+          (16) 99281-0772
+        </a>
+        <a href="https://wa.me/5516992810772?text=Oi%2C%20vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Z"/></svg>
+          Pedir no WhatsApp
+        </a>
+        <a href="https://www.instagram.com/boxbeeffranca/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/></svg>
+          @boxbeeffranca
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=R.%20Jos%C3%A9%20de%20Melo%2C%20350%20-%20Parque%20Francal%2C%20Franca%20-%20SP%2C%2014403-073" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          R. José de Melo, 350 — Parque Francal, Franca-SP
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Box Beef</span>
+      <a href="https://www.instagram.com/boxbeeffranca/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nav = document.getElementById('nav');
+  function onScrollNav(){
+    if (window.scrollY > 40) nav.classList.add('is-scrolled');
+    else nav.classList.remove('is-scrolled');
+  }
+  document.addEventListener('scroll', onScrollNav, { passive:true });
+  onScrollNav();
+
+  var hero = document.getElementById('topo');
+  var photoLayer = document.getElementById('parallax-photo');
+  var ticking = false;
+  function updateParallax(){
+    ticking = false;
+    if (reduceMotion) return;
+    var rect = hero.getBoundingClientRect();
+    var h = rect.height || 1;
+    var progress = Math.min(Math.max(-rect.top / h, 0), 1);
+    photoLayer.style.transform = 'translateY(' + (progress * 90) + 'px) scale(1.06)';
+  }
+  function requestParallax(){ if (!ticking){ window.requestAnimationFrame(updateParallax); ticking = true; } }
+  window.addEventListener('scroll', requestParallax, { passive:true });
+  window.addEventListener('resize', requestParallax);
+  updateParallax();
+})();
+</script>
+</body>
+</html>
